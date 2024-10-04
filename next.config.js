@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Add any other configurations you need here
 }
 
 module.exports = nextConfig
