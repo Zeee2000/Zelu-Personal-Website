@@ -38,3 +38,54 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# About Me
+
+# Zelealem Tesema
+
+## Software Engineer - DevOps and Cloud Solutions
+
+👋 Hello! I'm Zelealem, an innovative computer scientist with a robust foundation in software development and mathematics. I specialize in DevOps and Cloud Solutions, with a focus on creating maintainable, well-tested solutions across various cloud platforms.
+
+### 🚀 Quick Overview
+
+- 📍 Based in Pretoria, South Africa
+- 💼 Currently working at EPI-USE Labs
+- 🎓 BSc Computer Science (Cum laude) & BSc Honors in Computer Science from University of Pretoria
+- 🌐 [GitHub Profile](https://github.com/Zeee2000)
+
+### 💻 Technical Skills
+
+- **Languages:** Python, Java, Node.js, HTML/CSS/JavaScript
+- **Frameworks:** Spring Boot, Various JavaScript frameworks
+- **Cloud & DevOps:** AWS (IAM, EC2, S3, RDS, Lambda), Docker, Kubernetes, Terraform
+- **Databases:** Aurora, MongoDB, DynamoDB, RDS SQL Databases
+- **Other:** RESTful APIs, OData, CI/CD, Git, Test-driven Development, Linux, Scripting, Networking, SAP
+
+### 🏆 Certifications
+
+- AWS Certified Cloud Practitioner
+- AWS Certified Solutions Architect Associate
+
+### 🌟 Professional Highlights
+
+- Established projects using infrastructure as code with Terraform
+- Optimized development and deployment pipelines, reducing pipeline runner load by 80%
+- Developed a translation engine using LLMs, cutting costs by 95%
+- Created innovative time solutions for virtual clockings and employee time record reporting
+- Collaborated on a UNESCO-sponsored initiative to develop an intelligent tutoring system
+
+### 🌍 Languages
+
+- English (Fluent)
+- Afrikaans (Fluent)
+- Amharic (Semi-Fluent)
+- Spanish (Basic understanding)
+
+### 📫 Get in Touch
+
+- Email: zelutesema@gmail.com
+- Phone: +27 62 081 2951
+- LinkedIn: [Your LinkedIn Profile URL]
+
+Feel free to explore my repositories and don't hesitate to reach out for collaborations or questions!
