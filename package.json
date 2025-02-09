@@ -1,5 +1,5 @@
 {
-  "name": "zelu-personal-website",
+  "name": "zelu-portfolio-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,20 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "@react-three/drei": "^9.121.4",
-    "@react-three/fiber": "^8.17.14",
-    "@tailwindcss/cli": "^4.0.4",
-    "@tailwindcss/vite": "^4.0.3",
-    "autoprefixer": "^10.4.20",
-    "framer-motion": "^12.3.1",
-    "maath": "^0.10.8",
-    "postcss": "^8.5.1",
+    "@tailwindcss/vite": "^4.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",
-    "react-tilt": "^1.0.2",
-    "react-vertical-timeline-component": "^3.5.3"
+    "tailwindcss": "^4.0.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
@@ -35,7 +26,6 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
-    "tailwindcss": "^4.0.4",
     "vite": "^6.1.0"
   }
 }
