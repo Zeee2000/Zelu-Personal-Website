@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.violet-gradient {
+  background: linear-gradient(to bottom, #915EFF, transparent);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
