@@ -1,95 +1,102 @@
-import {useState} from 'react';
-import PropTypes from 'prop-types';
-import {navLinks} from '../constants';
-import {logo} from '../assets';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const NavLink = ({link, active, setActive, setIsMenuOpen}) => (
-    <a
-        key={link.id}
-        href={`#${link.id}`}
-        className={`rounded-md px-3 py-2 text-sm font-medium ${active === link.id ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
-        onClick={() => {
-            setActive(link.id);
-            setIsMenuOpen(false);
-        }}
-    >
-        {link.title}
-    </a>
-);
-
-NavLink.propTypes = {
-    link: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-    }).isRequired,
-    active: PropTypes.string.isRequired,
-    setActive: PropTypes.func.isRequired,
-    setIsMenuOpen: PropTypes.func.isRequired,
-};
-
-const HamburgerButton = ({isMenuOpen, setIsMenuOpen}) => (
-    <button
-        type="button"
-        className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
-        aria-controls="mobile-menu"
-        aria-expanded={isMenuOpen}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-    >
-        <span className="sr-only">Open main menu</span>
-        {isMenuOpen ? (
-            <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-        ) : (
-            <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"/>
-            </svg>
-        )}
-    </button>
-);
-
-HamburgerButton.propTypes = {
-    isMenuOpen: PropTypes.bool.isRequired,
-    setIsMenuOpen: PropTypes.func.isRequired,
-};
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
-    const [active, setActive] = useState('');
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    return (
-        <nav className="fixed top-0 w-full bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 z-50 shadow-lg">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="relative flex h-16 items-center justify-between">
-                    <div className="flex items-center">
-                        <img className="h-20 w-20 sm:h-20" src={logo} alt="Your Company"/>
-                    </div>
-                    <div className="hidden sm:ml-6 sm:flex sm:items-center sm:ml-auto">
-                        <div className="flex space-x-4">
-                            {navLinks.map((link) => (
-                                <NavLink key={link.id} link={link} active={active} setActive={setActive}
-                                         setIsMenuOpen={setIsMenuOpen}/>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                        <HamburgerButton isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
-                    </div>
-                </div>
-            </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
-            {isMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg sm:hidden" id="mobile-menu">
-                    <div className="flex flex-col py-1">
-                        {navLinks.map((link) => (
-                            <NavLink key={link.id} link={link} active={active} setActive={setActive}
-                                     setIsMenuOpen={setIsMenuOpen}/>
-                        ))}
-                    </div>
-                </div>
-            )}
-        </nav>
-    );
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-5 fixed top-0 z-20 ${
+        scrolled ? "bg-primary" : "bg-transparent"
+      }`}
+    >
+      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+        <Link
+          to='/'
+          className='flex items-center gap-2'
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src="./assets/zelu-logo.png" alt="./assets/zelu-logo.png" className='w-9 h-9 object-contain' />
+          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+            Zelu &nbsp;
+            <span className='sm:block hidden'> | Cloud Engineer </span>
+          </p>
+        </Link>
+
+        <ul className='list-none hidden sm:flex flex-row gap-10'>
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              className={`${
+                active === nav.title ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive(nav.title)}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
+
+        <div className='sm:hidden flex flex-1 justify-end items-center'>
+          <img
+            src={toggle ? close : menu}
+            alt='menu'
+            className='w-[28px] h-[28px] object-contain'
+            onClick={() => setToggle(!toggle)}
+          />
+
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+              {navLinks.map((nav) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === nav.title ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(nav.title);
+                  }}
+                >
+                  <a href={`#${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
