@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import zeluLogo from "../assets/zelu-logo.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -42,7 +43,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src="./assets/zelu-logo.png" alt="./assets/zelu-logo.png" className='w-9 h-9 object-contain' />
+          <img src={zeluLogo} alt="./assets/zelu-logo.png" className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Zelu &nbsp;
             <span className='sm:block hidden'> | Cloud Engineer </span>
