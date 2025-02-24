@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import zelulogo from "./zelulogo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -41,6 +42,7 @@ import epiuseLogo from "./company/EPIUSELogo.png";
 import unescoLogo from "./company/UNESCOLogo.png";
 
 export {
+  zelulogo,
   logo,
   backend,
   creator,
