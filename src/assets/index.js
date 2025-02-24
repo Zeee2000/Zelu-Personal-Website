@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
-import web from "./web.png";
+import web from "./web.svg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -29,6 +29,16 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
+import pythonLogo from "./python-logo.svg";
+import javaLogo from "./java-logo.svg";
+import javascriptLogo from "./javascript-logo.svg";
+import saplogo from "./sap-logo.svg";
+import frontendLogo from "./front-end-logo.png";
+
+import entelectLogo from "./company/EntelectLogo.png";
+import epiuseLogo from "./company/EPIUSELogo.png";
+import unescoLogo from "./company/UNESCOLogo.png";
 
 export {
   logo,
@@ -59,4 +69,12 @@ export {
   carrent,
   jobit,
   tripguide,
+  pythonLogo,
+  javaLogo,
+  javascriptLogo,
+  saplogo,
+  frontendLogo,
+    entelectLogo,
+    epiuseLogo,
+    unescoLogo,
 };
