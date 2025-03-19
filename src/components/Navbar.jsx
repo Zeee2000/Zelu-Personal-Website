@@ -9,6 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Handle scroll event to set the scrolled state
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
@@ -18,11 +19,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle link click to set the active link and scroll to top
   const handleLinkClick = (title) => {
     setActive(title);
     window.scrollTo(0, 0);
   };
 
+  // Render navigation links for desktop view
   const renderNavLinks = () => (
       <ul className='list-none hidden sm:flex flex-row gap-10'>
         {navLinks.map((nav) => (
@@ -39,6 +42,7 @@ const Navbar = () => {
       </ul>
   );
 
+  // Render mobile menu
   const renderMobileMenu = () => (
       <div
           className={`${
