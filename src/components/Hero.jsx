@@ -1,34 +1,43 @@
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import PatternBackground from "./PatternBackground";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#0f52ba]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
+      <PatternBackground />
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#0f52ba]'>Zelu</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a software engineer <br className='sm:block hidden' />
-          </p>
+      {/* Hero Content */}
+      <div className="absolute top-[120px] w-full">
+        <div className={`${styles.paddingX} max-w-7xl mx-auto`}>
+          <div className='flex flex-row items-start gap-5'>
+            <div className='flex flex-col justify-center items-center mt-5'>
+              <div className='w-5 h-5 rounded-full bg-[#64ffda]' />
+              <div className='w-1 sm:h-80 h-40 cyan-gradient' />
+            </div>
+
+            <div>
+              <h1 className="text-[#e6f1ff] font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]">
+                Hi, I'm <span className='text-[#64ffda]'>Zelu</span>
+              </h1>
+              <p className="text-[#8892b0] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2">
+                I am a software engineer
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* 3D Computer */}
+      <div className="absolute top-[350px] left-1/2 transform -translate-x-1/2 w-full max-w-[600px] h-[400px] z-10">
+        <ComputersCanvas />
+      </div>
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+      {/* Scroll Indicator */}
+      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10'>
         <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-[#8892b0] flex justify-center items-start p-2'>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -38,7 +47,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
+              className='w-3 h-3 rounded-full bg-[#64ffda] mb-1'
             />
           </div>
         </a>
