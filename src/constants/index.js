@@ -17,9 +17,6 @@ import {
   entelectLogo,
   epiuseLogo,
   unescoLogo,
-  carrent,
-  jobit,
-  tripguide,
 } from "../assets";
 
 export const navLinks = [
@@ -37,7 +34,7 @@ export const navLinks = [
   },
 ];
 
-const services = [
+export const services = [
   {
     title: "AWS Cloud Engineer",
     icon: web,
@@ -56,7 +53,7 @@ const services = [
   },
 ];
 
-const technologies = [
+export const technologies = [
   {
     name: "AWS",
     icon: web,
@@ -65,7 +62,7 @@ const technologies = [
     name: "Python",
     icon: pythonLogo,
   },
-    {
+  {
     name: "HTML 5",
     icon: html,
   },
@@ -111,7 +108,7 @@ const technologies = [
   },
 ];
 
-const experiences = [
+export const experiences = [
   {
     title: "Intermediate Software Engineer",
     company_name: "Entelect",
@@ -152,45 +149,17 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+export const projects = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
-const projects = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    name: "Personal Portfolio",
+    description: "A modern, responsive portfolio website built with React, Three.js, and Tailwind CSS. Features include 3D animations, interactive components, and a contact form with AWS SES integration.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "threejs",
         color: "green-text-gradient",
       },
       {
@@ -198,51 +167,47 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: "/portfolio.png",
+    source_code_link: "https://github.com/yourusername/portfolio",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    name: "Time Management System",
+    description: "A comprehensive time tracking and management system developed for EPI-USE. Features include virtual clocking, reporting, and analytics for employee time records.",
     tags: [
       {
-        name: "react",
+        name: "java",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "spring",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "postgresql",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: "/time-management.png",
+    source_code_link: "https://github.com/yourusername/time-management",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "AI Tutoring System",
+    description: "An intelligent tutoring system developed for UNESCO, featuring NLP and machine learning capabilities for providing continuous educational support.",
     tags: [
       {
-        name: "nextjs",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "tensorflow",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "nlp",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: "/ai-tutoring.png",
+    source_code_link: "https://github.com/yourusername/ai-tutoring",
   },
 ];
-
-export { services, experiences, projects };
