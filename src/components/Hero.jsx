@@ -18,10 +18,10 @@ const Hero = () => {
             </div>
 
             <div>
-              <h1 className="text-[#e6f1ff] font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]">
+              <h1 className={`${styles.heroHeadText}`}>
                 Hi, I'm <span className='text-[#64ffda]'>Zelu</span>
               </h1>
-              <p className="text-[#8892b0] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2">
+              <p className={`${styles.heroSubText}`}>
                 I am a software engineer
               </p>
             </div>
@@ -37,7 +37,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10'>
         <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-[#8892b0] flex justify-center items-start p-2'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-[#8892b0] flex justify-center items-start p-2 hover:border-[#64ffda] transition-colors duration-300'>
             <motion.div
               animate={{
                 y: [0, 24, 0],
