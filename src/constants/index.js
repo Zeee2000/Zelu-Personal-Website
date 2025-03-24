@@ -1,34 +1,25 @@
 import {
-  mobile,
-  backend,
-  creator,
   web,
-  javascript,
-  typescript,
+  pythonLogo,
   html,
   css,
+  javascript,
+  typescript,
   reactjs,
-  redux,
   tailwind,
   nodejs,
-  mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  saplogo,
+  javaLogo,
+  frontendLogo,
+  backend,
+  entelectLogo,
+  epiuseLogo,
+  unescoLogo,
   carrent,
   jobit,
   tripguide,
-  threejs,
-  pythonLogo,
-  javaLogo,
-  javascriptLogo,
-  saplogo,
-  frontendLogo, entelectLogo, epiuseLogo, unescoLogo,
-
 } from "../assets";
 
 export const navLinks = [
@@ -156,7 +147,7 @@ const experiences = [
     points: [
       "Collaborated with experienced researchers on a UNESCO-sponsored initiative",
       "Leveraged AI methodologies to develop an intelligent tutoring system designed to provide students with continuous, round-the-clock support for course content",
-      "Utilized technologies such as natural language processing (NLP), machine learning algorithms, and data analytics to enhance the educational tool’s functionality",
+      "Utilized technologies such as natural language processing (NLP), machine learning algorithms, and data analytics to enhance the educational tool's functionality",
     ],
   },
 ];
@@ -254,4 +245,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, experiences, projects };
