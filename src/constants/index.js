@@ -52,27 +52,15 @@ const services = [
     icon: web,
   },
   {
-    title: "Python Developer",
+    title: "Back-end Developer",
     icon: pythonLogo,
-  },
-  {
-    title: "Java Developer",
-    icon: javaLogo,
-  },
-  {
-    title: "Javascript Developer",
-    icon: javascriptLogo,
-  },
-  {
-    title: "SAP Developer",
-    icon: saplogo,
   },
   {
     title: "Front-end Developer",
     icon: frontendLogo,
   },
   {
-    title: "Solutions Architecture",
+    title: "Solutions Architect",
     icon: backend,
   },
 ];

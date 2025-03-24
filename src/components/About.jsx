@@ -39,19 +39,18 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Who am I?</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-          Inquisitive and energetic computer scientist with expertise in leadership,
-          software development, artificial intelligence, and mathematics.
-          Dedicated to daily research on emerging technologies and computer science topics.
-          Leverages strong development skills with an emphasis on collaboration, communication, and creativity.
-          Adapts easily to diverse team dynamics and work environments. Capable leader who also values listening and compromise when appropriate.
+          Dynamic computer scientist merging technical expertise in AI,
+          mathematics, and software development with exceptional leadership capabilities.
+          Consistently at the forefront of emerging technologies through daily research,
+          while fostering innovative solutions through collaborative teamwork and adaptable
+          communication across diverse professional environments.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
