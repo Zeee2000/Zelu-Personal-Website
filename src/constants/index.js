@@ -1,34 +1,11 @@
 import {
-  mobile,
-  backend,
-  creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
   pythonLogo,
-  javaLogo,
-  javascriptLogo,
-  saplogo,
-  frontendLogo, entelectLogo, epiuseLogo, unescoLogo,
-
+  frontendLogo,
+  backend,
+  entelectLogo,
+  epiuseLogo,
+  unescoLogo,
 } from "../assets";
 
 export const navLinks = [
@@ -46,93 +23,26 @@ export const navLinks = [
   },
 ];
 
-const services = [
+export const services = [
   {
     title: "AWS Cloud Engineer",
     icon: web,
   },
   {
-    title: "Python Developer",
+    title: "Back-end Developer",
     icon: pythonLogo,
-  },
-  {
-    title: "Java Developer",
-    icon: javaLogo,
-  },
-  {
-    title: "Javascript Developer",
-    icon: javascriptLogo,
-  },
-  {
-    title: "SAP Developer",
-    icon: saplogo,
   },
   {
     title: "Front-end Developer",
     icon: frontendLogo,
   },
   {
-    title: "Solutions Architecture",
+    title: "Solutions Architect",
     icon: backend,
   },
 ];
 
-const technologies = [
-  {
-    name: "AWS",
-    icon: web,
-  },
-  {
-    name: "Python",
-    icon: pythonLogo,
-  },
-    {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-  {
-    name: "SAP",
-    icon: saplogo,
-  },
-  {
-    name: "Java",
-    icon: javaLogo,
-  },
-];
-
-const experiences = [
+export const experiences = [
   {
     title: "Intermediate Software Engineer",
     company_name: "Entelect",
@@ -168,50 +78,22 @@ const experiences = [
     points: [
       "Collaborated with experienced researchers on a UNESCO-sponsored initiative",
       "Leveraged AI methodologies to develop an intelligent tutoring system designed to provide students with continuous, round-the-clock support for course content",
-      "Utilized technologies such as natural language processing (NLP), machine learning algorithms, and data analytics to enhance the educational tool’s functionality",
+      "Utilized technologies such as natural language processing (NLP), machine learning algorithms, and data analytics to enhance the educational tool's functionality",
     ],
   },
 ];
 
-const testimonials = [
+export const projects = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
-const projects = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    name: "Personal Portfolio",
+    description: "A modern, responsive portfolio website built with React, Three.js, and Tailwind CSS. Features include 3D animations, interactive components, and a contact form with AWS SES integration.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "threejs",
         color: "green-text-gradient",
       },
       {
@@ -219,51 +101,47 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: "/portfolio.png",
+    source_code_link: "https://github.com/yourusername/portfolio",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    name: "Time Management System",
+    description: "A comprehensive time tracking and management system developed for EPI-USE. Features include virtual clocking, reporting, and analytics for employee time records.",
     tags: [
       {
-        name: "react",
+        name: "java",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "spring",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "postgresql",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: "/time-management.png",
+    source_code_link: "https://github.com/yourusername/time-management",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "AI Tutoring System",
+    description: "An intelligent tutoring system developed for UNESCO, featuring NLP and machine learning capabilities for providing continuous educational support.",
     tags: [
       {
-        name: "nextjs",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "tensorflow",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "nlp",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: "/ai-tutoring.png",
+    source_code_link: "https://github.com/yourusername/ai-tutoring",
   },
 ];
-
-export { services, technologies, experiences, testimonials, projects };

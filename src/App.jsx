@@ -1,24 +1,26 @@
 import { BrowserRouter } from "react-router-dom";
-
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { Toaster } from 'react-hot-toast';
+import { About, Contact, Experience, Hero, Navbar, Works, StarsCanvas } from "./components";
+import PatternBackground from "./components/PatternBackground";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+      <div className="relative z-0">
+        <PatternBackground />
+        
+        <div className="relative z-10 bg-transparent">
           <Navbar />
           <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        {/*<Works />*/}
-        {/*<Feedbacks />*/}
-        <div className='relative z-0'>
+          <About />
+          <Experience />
+          <Works />
           <Contact />
+        </div>
+        <div className='relative z-0'>
           <StarsCanvas />
         </div>
+        <Toaster />
       </div>
     </BrowserRouter>
   );

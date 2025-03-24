@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .violet-gradient {
-  background: linear-gradient(to bottom, #915EFF, transparent);
+  background: linear-gradient(to bottom, #0f52ba, transparent);
 }
 
 #root {

@@ -5,15 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        primary: "#0a192f",    // Deep navy blue background
+        secondary: "#8892b0",  // Muted blue-gray for secondary text
+        tertiary: "#112240",   // Slightly lighter navy for cards
+        "black-100": "#1a1f2e", // Darker shade for hover states
+        "black-200": "#0a192f", // Same as primary for consistency
+        "white-100": "#e6f1ff", // Light blue-white for text
+        accent: "#64ffda",      // Bright cyan for accents
+        "accent-hover": "#4cd8b2", // Slightly darker cyan for hover
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        card: "0px 35px 120px -15px #112240",
       },
       screens: {
         xs: "450px",
