@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import toast from 'react-hot-toast';
+import { FaEnvelope, FaUser, FaPaperPlane } from 'react-icons/fa';
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -91,70 +92,98 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-tertiary p-8 rounded-2xl border border-accent/20 hover:border-accent/40 transition-all duration-300'
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+    <div className="relative w-full h-full min-h-[100vh] flex items-center justify-center py-20">
+      <div className="absolute inset-0 bg-[#0a192f] z-0" />
+      
+      <div className="relative z-10 flex lg:flex-row flex-col gap-10 items-center justify-center w-full max-w-7xl mx-auto px-4">
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className="bg-[#112240] p-8 rounded-2xl w-full max-w-[500px]"
         >
-          <label className='flex flex-col'>
-            <span className='text-white-100 font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Enter your full name"
-              className='bg-black-100 py-4 px-6 placeholder:text-secondary text-white-100 rounded-lg outline-none border border-accent/20 focus:border-accent transition-all duration-300 font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white-100 font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Enter your email address"
-              className='bg-black-100 py-4 px-6 placeholder:text-secondary text-white-100 rounded-lg outline-none border border-accent/20 focus:border-accent transition-all duration-300 font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white-100 font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='Please enter your message here...'
-              className='bg-black-100 py-4 px-6 placeholder:text-secondary text-white-100 rounded-lg outline-none border border-accent/20 focus:border-accent transition-all duration-300 font-medium'
-            />
-          </label>
+          <div className="flex flex-col items-start gap-2 mb-8">
+            <div className="flex items-center gap-3 text-[#64ffda] mb-2">
+              <FaEnvelope className="w-5 h-5" />
+              <p className="uppercase tracking-wider text-sm font-medium">Get in touch</p>
+            </div>
+            <h2 className="text-[#e6f1ff] text-4xl font-bold">Contact.</h2>
+          </div>
 
-          <button
-            type='submit'
-            className='bg-accent hover:bg-accent-hover py-3 px-8 rounded-xl outline-none w-fit text-primary font-bold shadow-md shadow-accent/20 hover:shadow-accent/40 transition-all duration-300'
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-6"
           >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </motion.div>
+            <div className="flex flex-col gap-2">
+              <label className="text-[#8892b0] text-sm">Your Name</label>
+              <div className="relative">
+                <div className="absolute left-4 top-1/2 -translate-y-1/2">
+                  <FaUser className="w-5 h-5 text-[#64ffda]" />
+                </div>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Enter your full name"
+                  className="w-full bg-[#1a1f2e] py-4 pl-12 pr-6 placeholder:text-[#8892b0] text-[#e6f1ff] rounded-lg outline-none border border-[#64ffda]/20 focus:border-[#64ffda] transition-all duration-300"
+                />
+              </div>
+            </div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <EarthCanvas />
-      </motion.div>
+            <div className="flex flex-col gap-2">
+              <label className="text-[#8892b0] text-sm">Your Email</label>
+              <div className="relative">
+                <div className="absolute left-4 top-1/2 -translate-y-1/2">
+                  <FaEnvelope className="w-5 h-5 text-[#64ffda]" />
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email address"
+                  className="w-full bg-[#1a1f2e] py-4 pl-12 pr-6 placeholder:text-[#8892b0] text-[#e6f1ff] rounded-lg outline-none border border-[#64ffda]/20 focus:border-[#64ffda] transition-all duration-300"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="text-[#8892b0] text-sm">Your Message</label>
+              <textarea
+                rows={7}
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Please enter your message here..."
+                className="w-full bg-[#1a1f2e] py-4 px-6 placeholder:text-[#8892b0] text-[#e6f1ff] rounded-lg outline-none border border-[#64ffda]/20 focus:border-[#64ffda] transition-all duration-300 resize-none"
+              />
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              type="submit"
+              className="group bg-[#64ffda] hover:bg-[#4cd8b2] py-3 px-6 rounded-lg text-[#0a192f] font-medium flex items-center justify-center gap-2 transition-all duration-300 mt-4"
+            >
+              {loading ? (
+                "Sending..."
+              ) : (
+                <>
+                  Send Message
+                  <FaPaperPlane className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
+            </motion.button>
+          </form>
+        </motion.div>
+
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className="lg:flex-1 w-full h-[350px] lg:h-[550px]"
+        >
+          <EarthCanvas />
+        </motion.div>
+      </div>
     </div>
   );
 };
