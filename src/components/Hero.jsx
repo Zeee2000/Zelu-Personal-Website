@@ -10,7 +10,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowHint(false);
-    }, 6000); // Hide after 6 seconds
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -18,6 +18,25 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden">
       <PatternBackground />
+
+      {/* Hint Element */}
+      {showHint && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="absolute top-[15%] left-1/2 transform -translate-x-1/2 z-10 
+            bg-[#915EFF]/10 backdrop-blur-sm border border-[#915EFF]/30
+            px-6 py-3 rounded-full shadow-xl"
+        >
+          <div className="flex items-center gap-2">
+            <span className="text-white/90 text-sm font-medium">
+              ✨ Click and drag to explore the model
+            </span>
+          </div>
+        </motion.div>
+      )}
 
       {/* Hero Content */}
       <div className="absolute top-[120px] w-full">
@@ -43,40 +62,6 @@ const Hero = () => {
       {/* 3D Computer */}
       <div className='absolute top-0 left-0 w-full h-[800px]'>
         <ComputersCanvas />
-        {showHint && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ 
-              opacity: [0, 1, 1, 0],
-              y: [10, 0, 0, -10]
-            }}
-            transition={{ 
-              duration: 6,
-              times: [0, 0.1, 0.9, 1],
-              ease: "easeInOut"
-            }}
-            className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-[#0a192f]/90 backdrop-blur-sm border border-[#64ffda]/30 rounded-xl px-6 py-3 text-[#64ffda] text-sm flex items-center gap-3 shadow-[0_0_15px_rgba(100,255,218,0.1)] hover:shadow-[0_0_20px_rgba(100,255,218,0.2)] transition-all duration-300"
-          >
-            <motion.span
-              animate={{ 
-                scale: [1, 1.2, 1],
-                rotate: [0, 10, -10, 0]
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-              className="text-lg"
-            >
-              👆
-            </motion.span>
-            <div className="flex flex-col">
-              <span className="font-medium">Interactive 3D Model</span>
-              <span className="text-[#8892b0] text-xs">Click and drag to rotate</span>
-            </div>
-          </motion.div>
-        )}
       </div>
 
       {/* Scroll Indicator */}
