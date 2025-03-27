@@ -26,13 +26,13 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute xs:top-[20%] top-[30%] left-1/2 transform -translate-x-1/2 z-10 
+          className="absolute xs:top-[20%] top-[30%] left-[30%] transform -translate-x-1/2 z-10 
             bg-[#915EFF]/10 backdrop-blur-sm border border-[#915EFF]/30
             px-4 py-2 xs:px-6 xs:py-3 rounded-full shadow-xl
-            w-auto max-w-[90%] xs:max-w-none"
+            w-auto min-w-fit xs:max-w-none"
         >
           <div className="flex items-center justify-center gap-2">
-            <span className="text-white/90 text-xs xs:text-sm font-medium whitespace-nowrap">
+            <span className="text-white/90 text-xs xs:text-sm font-medium whitespace-nowrap overflow-visible">
               ✨ Interactive model - Click and drag
             </span>
           </div>
