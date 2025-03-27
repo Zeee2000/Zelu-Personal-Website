@@ -106,7 +106,7 @@ export const projects = [
   },
   {
     name: "Kenzo Workout Suite",
-    description: "A comprehensive fitness platform featuring an innovative 3D Pose Studio for exercise demonstrations. Utilizes Three.js and Blender models for joint manipulation, while offering personalized workout planning and progress tracking. Built with Angular, NestJS, and deployed on AWS.",
+    description: "A comprehensive fitness platform developed as a university capstone project with a team of 5 over 4 months. Features an innovative 3D Pose Studio built with Three.js and Blender models, allowing trainers to create custom exercise demonstrations through joint manipulation. Built with Angular, NestJS, and deployed on AWS.",
     tags: [
       {
         name: "angular",
