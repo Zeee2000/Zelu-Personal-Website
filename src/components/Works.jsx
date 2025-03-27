@@ -84,7 +84,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          The following section includes projects 
+          The following projects showcase my expertise in full-stack development, 3D visualization, and AI research. Each project demonstrates my ability to solve complex problems, work with different technologies, and deliver innovative solutions. From interactive fitness platforms to AI-driven security research, these examples reflect my passion for creating impactful software solutions.
         </motion.p>
       </div>
 
