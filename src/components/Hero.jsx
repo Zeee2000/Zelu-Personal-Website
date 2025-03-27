@@ -41,7 +41,7 @@ const Hero = () => {
       </div>
 
       {/* 3D Computer */}
-      <div className="absolute top-[350px] left-1/2 transform -translate-x-1/2 w-full max-w-[600px] h-[400px] z-10">
+      <div className='absolute top-0 left-0 w-full h-[800px]'>
         <ComputersCanvas />
         {showHint && (
           <motion.div
