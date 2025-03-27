@@ -26,13 +26,19 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute xs:top-[20%] top-[30%] left-[30%] transform -translate-x-1/2 z-10 
+          className="absolute 
+            sm:top-[290px] top-[260px] 
+            sm:left-[60%] left-[25%] 
+            transform -translate-x-1/2 
+            z-10 
             bg-[#915EFF]/10 backdrop-blur-sm border border-[#915EFF]/30
-            px-4 py-2 xs:px-6 xs:py-3 rounded-full shadow-xl
-            w-auto min-w-fit xs:max-w-none"
+            px-3 py-1.5 sm:px-6 sm:py-3 
+            rounded-full shadow-xl
+            w-auto min-w-fit sm:max-w-none
+            text-center"
         >
           <div className="flex items-center justify-center gap-2">
-            <span className="text-white/90 text-xs xs:text-sm font-medium whitespace-nowrap overflow-visible">
+            <span className="text-white/90 text-[10px] sm:text-sm font-medium whitespace-nowrap overflow-visible">
               ✨ Interactive model - Click and drag
             </span>
           </div>
@@ -61,7 +67,7 @@ const Hero = () => {
       </div>
 
       {/* 3D Computer */}
-      <div className='absolute top-0 left-0 w-full h-[800px]'>
+      <div className='absolute top-0 right-[30px] w-full sm:h-[800px] h-[700px]'>
         <ComputersCanvas />
       </div>
 
