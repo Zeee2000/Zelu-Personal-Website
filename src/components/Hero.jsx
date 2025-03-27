@@ -26,13 +26,14 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute top-[15%] left-1/2 transform -translate-x-1/2 z-10 
+          className="absolute xs:top-[15%] top-[25%] left-1/2 transform -translate-x-1/2 z-10 
             bg-[#915EFF]/10 backdrop-blur-sm border border-[#915EFF]/30
-            px-6 py-3 rounded-full shadow-xl"
+            px-4 py-2 xs:px-6 xs:py-3 rounded-full shadow-xl
+            w-auto max-w-[90%] xs:max-w-none"
         >
-          <div className="flex items-center gap-2">
-            <span className="text-white/90 text-sm font-medium">
-              ✨ Click and drag to explore the model
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-white/90 text-xs xs:text-sm font-medium whitespace-nowrap">
+              ✨ Click and drag to explore
             </span>
           </div>
         </motion.div>
