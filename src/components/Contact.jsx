@@ -8,6 +8,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { PlaneCanvas } from './canvas';
 
 const Contact = () => {
   const formRef = useRef();
@@ -191,12 +192,9 @@ const Contact = () => {
           </form>
         </motion.div>
 
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="lg:flex-1 w-full h-[350px] lg:h-[550px]"
-        >
-          <EarthCanvas />
-        </motion.div>
+        <div className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
+          <PlaneCanvas />
+        </div>
       </div>
     </div>
   );
