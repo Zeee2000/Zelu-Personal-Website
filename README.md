@@ -77,7 +77,3 @@ Feel free to reach out to me through:
 - The contact form on my website
 - [LinkedIn](your-linkedin-url)
 - [GitHub](https://github.com/zelutesema)
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
