@@ -6,6 +6,9 @@ import {
   entelectLogo,
   epiuseLogo,
   unescoLogo,
+  personalPortfolio,
+  kenzoWorkout,
+  research,
 } from "../assets";
 
 export const navLinks = [
@@ -50,10 +53,9 @@ export const experiences = [
     iconBg: "#383E56",
     date: "January 2025 - Current",
     points: [
-      "Joined Entelect on The First Order",
-      "Primary Objective to build technical skills relevant to client opportunities",
-      "Completed 3 AWS Certifications i.e AWS Certified Solutions Architect, AWS Certified Developer, AWS Certified SysOps Administrator",
-      "Participate in daily stand-ups to update the team on progress",
+      "Working on rewards systems with the personal group team",
+      "Developing technical skills through The First Order program",
+      "Achieved AWS Developer Associate, Sysops Administrator and AI Foundational Certifications"
     ],
   },
   {
@@ -63,10 +65,9 @@ export const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2022 - December 2024",
     points: [
-      "Involved in critical architectural decisions, ensuring maintainable, well-tested solutions in various hosting platforms",
-      "Established and optimized development and deployment pipelines to include static code analysis, correct code linting, adequate testing and optimized deployments",
-      "Developer of innovative time solutions that allows virtual clocking and reporting on employee time records",
-      "Mentor new hires to facilitate seamless integration into the team and continuous guidance within projects",
+      "Development and maintenance of time management solutions with virtual clocking capabilities",
+      "Established optimized CI/CD pipelines with code analysis and testing",
+      "Mentored new team members and provided technical guidance on projects",
     ],
   },
   {
@@ -76,9 +77,8 @@ export const experiences = [
     iconBg: "#383E56",
     date: "Jan 2021 - Jan 2022",
     points: [
-      "Collaborated with experienced researchers on a UNESCO-sponsored initiative",
-      "Leveraged AI methodologies to develop an intelligent tutoring system designed to provide students with continuous, round-the-clock support for course content",
-      "Utilized technologies such as natural language processing (NLP), machine learning algorithms, and data analytics to enhance the educational tool's functionality",
+      "Developed AI-powered educational support systems using NLP and machine learning",
+      "Collaborated with researchers to enhance learning tools through data analytics",
     ],
   },
 ];
@@ -86,7 +86,7 @@ export const experiences = [
 export const projects = [
   {
     name: "Personal Portfolio",
-    description: "A modern, responsive portfolio website built with React, Three.js, and Tailwind CSS. Features include 3D animations, interactive components, and a contact form with AWS SES integration.",
+    description: "A dynamic portfolio website built with React and Three.js, featuring interactive 3D elements and animations. Implements responsive design principles, AWS SES integration for contact functionality, and modern web development practices for optimal user experience.",
     tags: [
       {
         name: "react",
@@ -101,47 +101,63 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "/portfolio.png",
-    source_code_link: "https://github.com/yourusername/portfolio",
+    image: personalPortfolio,
+    source_code_link: "https://github.com/Zeee2000/Zelu-Personal-Website",
   },
   {
-    name: "Time Management System",
-    description: "A comprehensive time tracking and management system developed for EPI-USE. Features include virtual clocking, reporting, and analytics for employee time records.",
+    name: "Kenzo Workout Suite",
+    description: "A comprehensive fitness platform featuring an innovative 3D Pose Studio for exercise demonstrations. Utilizes Three.js and Blender models for joint manipulation, while offering personalized workout planning and progress tracking. Built with Angular, NestJS, and deployed on AWS.",
     tags: [
       {
-        name: "java",
+        name: "angular",
         color: "blue-text-gradient",
       },
       {
-        name: "spring",
+        name: "nestjs",
         color: "green-text-gradient",
       },
       {
-        name: "postgresql",
+        name: "typescript",
         color: "pink-text-gradient",
       },
+      {
+        name: "threejs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "blender",
+        color: "green-text-gradient",
+      },
+      {
+        name: "aws",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "sql",
+        color: "blue-text-gradient",
+      },
     ],
-    image: "/time-management.png",
-    source_code_link: "https://github.com/yourusername/time-management",
+    image: kenzoWorkout,
+    source_code_link: "https://github.com/COS301-SE-2021/Kenzo-Workout-Suite",
   },
   {
-    name: "AI Tutoring System",
-    description: "An intelligent tutoring system developed for UNESCO, featuring NLP and machine learning capabilities for providing continuous educational support.",
+    name: "AI-Powered IDS",
+    description: "A research study evaluating various AI techniques for enhancing network security anomaly detection. Analyzes machine learning approaches using IDS datasets to measure detection accuracy and performance. Provides comparative insights for improving traditional intrusion detection methods.",
     tags: [
       {
         name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "tensorflow",
+        name: "machine learning",
         color: "green-text-gradient",
       },
       {
-        name: "nlp",
+        name: "cybersecurity",
         color: "pink-text-gradient",
       },
     ],
-    image: "/ai-tutoring.png",
-    source_code_link: "https://github.com/yourusername/ai-tutoring",
+    image: research,
+    source_code_link: "https://github.com/Zeee2000/COS700_IDS_ML",
   },
 ];
