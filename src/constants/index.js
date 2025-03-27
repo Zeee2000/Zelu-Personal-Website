@@ -161,3 +161,5 @@ export const projects = [
     source_code_link: "https://github.com/Zeee2000/COS700_IDS_ML",
   },
 ];
+
+export const overview = "A passionate software engineer with a unique blend of technical expertise and leadership qualities. Specializing in cloud architecture and full-stack development, I bring creative solutions to complex problems. Beyond coding, I'm an avid researcher and continuous learner, always exploring emerging technologies and AI innovations.";
